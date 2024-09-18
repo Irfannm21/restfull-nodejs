@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest -i"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -16,7 +21,9 @@
   },
   "homepage": "https://github.com/Irfannm21/restfull-nodejs#readme",
   "description": "",
+  "type": "module",
   "dependencies": {
+    "@prisma/client": "^5.19.1",
     "bcrypt": "^5.1.1",
     "express": "^4.21.0",
     "joi": "^17.13.3",
